@@ -1,52 +1,105 @@
-*{
-	box-sizing: content-box;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins|Raleway');
+
+
+/*la tarjeta en general*/
 #tarjeta{
 	margin: 0;
 	padding: 0;
-	width: 70%;
-	height: 450px;
-	border: 1px solid black;
+	width: 80%;
+	height: 520px;
+	position: relative;
+	top: 100px;
+	left: 100px;
 }
 
+/*Seccion de la foto*/
 #foto{
 	position: relative;
-	background-color: yellow;
-	width: 40%;
+	background-image: url('http://www.redboxinnovation.com/inspirate/wp-content/uploads/2017/06/Copy-of-Students1-830x553.jpg');
+	background-position: -60px -20px;
+	width: 60%;
 	height: 100%;
 	float: left;
 }
-
-#presentacion{
-	position: relative;
-	width: 60%;
-	height: 100%;
-	float: right;
-	background-color: gray;
-	color: white;
-}
-
 
 #logo{
 	background-image: url(img/Logo.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 30%;
-	height: 10%;
+	width: 40%;
+	height: 20%;
 	position: absolute;
+	top: 10px;
+	right: 70px;
+}
+#logo::after{
+	content: 'codigo que transforma';
+	font-family: 'Poppins';
+	position: relative;
+	top: 65px;
+	left: 30px;
 }
 
+
+/*Seccion de la presentacion*/
+#presentacion{
+	position: relative;
+	width: 40%;
+	height: 100%;
+	float: right;
+	background-color: #585858;
+	color: white;
+}
+
+#triangulo{
+	width: 0;
+	height: 0;
+	border-bottom: 520px solid #585858;
+	border-left: 340px solid transparent;
+	position: absolute;
+	left: -340px;
+}
+
+
+/*Segundo logo*/
 #logo2{
 	background-image: url(img/logo2.png);
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
-	width: 30%;
-	height: 10%;
+	width: 10%;
+	height: 19%;
 	position: absolute;
-	bottom: 20px;
-	right: 10px;
+	bottom: 0;
+	right: 0;
 }
 
-p:firstChild{
-	
+/*Datos*/
+#nombre{
+	font-family: 'Raleway';
+	font-size: 2.5em;
+	font-weight: bolder;
+	text-align: center;
+	position: relative;
+	top: 20px;
+	right: 30px;
+}
+
+#front{
+	font-family: 'Montserrat';
+	font-size: 1.6em;
+	color: orange;
+	text-align: center;
+	position: relative;
+	top: 40px;
+	right: 30px;
+}
+
+#datos{
+	font-family: 'Poppins';
+	font-weight: lighter;
+	font-size: 1.2em;
+	line-height: 10px;
+	position: absolute;
+	bottom: 80px;
+	left: -100px;
 }
